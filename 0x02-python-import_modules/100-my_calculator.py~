@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+if __name__ == '__main__':
+    import sys
+    if len(sys.argv) != 4:
+        print("{} <a> <operator> <b>".format(sys.argv[0]))
+        sys.exit(1)
+    elif sys.argv[2] not in '/*+-':
+        print("Unknown operator. Available operators: +, -, * and /")
+        sys.exit(1)
+    else:
+        from calculator_1 import  add
+        a = sys.argv[1]
+        b = sys.argv[3]
+        op = sys.argv[2]
+        Func=[add]
+        operator = "-+/*"
+        print("-->{},{}".format(a,b))        
+        print(Func[0](a, b))
+        sys.exit(0)
