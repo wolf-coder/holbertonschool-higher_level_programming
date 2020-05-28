@@ -71,7 +71,6 @@ class Rectangle:
     def __str__(self):
         """
         """
-        print("->", Rectangle.print_symbol)
         if (self.__height * self.__width) is 0:
             return ""
         else:
