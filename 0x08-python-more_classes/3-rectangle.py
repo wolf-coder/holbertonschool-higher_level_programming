@@ -67,7 +67,7 @@ class Rectangle:
         """
         """
         if (self.__height * self.__width) is 0:
-            return "\n"
+            return ""
         else:
             Str = ""
             for i in range(self.__height):
