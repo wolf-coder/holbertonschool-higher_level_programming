@@ -8,20 +8,20 @@ importing `print_sorted` from "1-my_list"
 
 Expect the creation of a MyList class instance
 
->>> lst = MyList()
->>> isinstance(lst, MyList)
+>>> my_list = MyList()
+>>> isinstance(my_list, MyList)
 True
 
 Expect  my_list instance printed the right format
->>> lst = MyList()
->>> lst.append(1)
->>> lst.append(4)
->>> lst.append(2)
->>> lst.append(44)
->>> lst.append(3333)
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(44)
+>>> my_list.append(3333)
 >>> print(my_list)
 [1, 4, 2, 44, 3333]
 
 Expect sorted list when calling print_sorted() method
 >>> my_list.print_sorted()
-[1, 2, 3, 44, 3333]
+[1, 2, 4, 44, 3333]
