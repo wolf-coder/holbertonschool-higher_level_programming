@@ -35,3 +35,10 @@ Empty list expectation
 []
 >>> my_list.print_sorted()
 []
+
+Checking for negative numbers
+
+
+>>> tmp = MyList([3333, -3, 83, -12, 44, 23])
+>>> tmp.print_sorted()
+[-12, -3, 23, 44, 83, 3333]
