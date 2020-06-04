@@ -2,10 +2,10 @@
 """
 Module to manage file.
 """
+from json import dumps
 
 
 def to_json_string(my_obj):
-    from json import dumps
     """
     unction that returns the JSON representation of an object (string).
     """
