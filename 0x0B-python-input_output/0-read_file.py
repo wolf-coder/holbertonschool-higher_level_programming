@@ -2,6 +2,8 @@
 """
 Module to read file
 """
+
+
 def read_file(filename=""):
     """
     """
