@@ -29,5 +29,5 @@ class Rectangle(BaseGeometry):
         """
         str constructor
         """
-        return "[{}] {}/{}".format(self.__class__.__name__,
+        return "[{}] {}/{}".format("Rectangle",
                                    self.__width, self.__height)
