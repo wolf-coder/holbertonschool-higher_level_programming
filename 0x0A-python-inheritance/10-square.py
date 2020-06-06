@@ -7,7 +7,7 @@ Rectangle = __import__("9-rectangle").Rectangle
 
 class Square(Rectangle):
     """
-    Module Square ingerits form Rectangle.
+    Module Square ingerits form Rectangle
     """
     def __init__(self, size):
         """
