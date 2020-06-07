@@ -12,10 +12,10 @@ class MyInt(int):
         """
         reversing equality
         """
-        return self.__class__.__ne__(int(self), other)
+        return super().__class__.__ne__(int(self), other)
 
     def __ne__(self, other):
         """
         reversing inequality
         """
-        return self.__class__.__eq__(int(self), other)
+        return super().__class__.__eq__(int(self), other)
