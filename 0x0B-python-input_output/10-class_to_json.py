@@ -2,7 +2,6 @@
 """
 module
 """
-from json import dumps, loads
 
 
 def class_to_json(obj):
