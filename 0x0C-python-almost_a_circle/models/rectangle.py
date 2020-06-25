@@ -89,10 +89,9 @@ class Rectangle(Base):
     def display(self):
         """
         """
+        print("{}".format("\n"*self.y), end="")
         for i in range(self.height):
-            for j in range(self.width):
-                print("#", end="")
-            print()
+            print("{}{}".format(' '*self.x, "#"*self.width), end="\n")
 
     def __str__(self):
         """
