@@ -104,11 +104,13 @@ class Rectangle(Base):
             self.height
         )
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         """
-        attr = ("id", "width", "height", "x", "y")
-        i = 0
-        for arg in args:
-            setattr(self, attr[i], arg)
-            i += 1
+        if args:
+            attr = dict([(0, "id"), (1, "width"), (2, "height"),
+                         (3, "x"), (4, "y")])
+            for i, v in enumerate(args):
+                setattr(self, attr[i], v)
+        for k, v in kwargs.items():
+            setattr(self, k, v)
