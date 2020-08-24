@@ -8,5 +8,5 @@ if __name__ == "__main__":
     url = argv[1]
     values = {"email": argv[2]}
 
-    RequestT = requests.post(url, values)
+    RequestT = requestds.post(url, values)
     print(Request.text)
