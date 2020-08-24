@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
 """
+import requests
 from sys import argv
-import  requests 
 if __name__ == "__main__":
     url = argv[1]
     Request = requests.get(argv[1])
