@@ -8,7 +8,7 @@
     -- You can use only one SELECT statement
     -- The database name will be passed as an argument of the mysql command
 
-SELECT name as 'genre', COUNT(*) AS 'number_of_shows' 
+SELECT name AS 'genre', COUNT(*) AS 'number_of_shows' 
 FROM tv_show_genres
 INNER JOIN tv_genres
 ON tv_show_genres.genre_id = tv_genres.id
