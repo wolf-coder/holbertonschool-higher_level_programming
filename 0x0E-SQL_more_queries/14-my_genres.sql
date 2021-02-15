@@ -5,10 +5,10 @@
     -- You can use only one SELECT statement
     -- The database name will be passed as an argument of the mysql command
 
-SELECT name FROM tv_show_genres
-INNER JOIN tv_genres
-ON tv_show_genres.genre_id = tv_genres.id
-WHERE show_id =
-      (SELECT id FROM tv_shows
-      WHERE title = 'Dexter')
+SELECT name FROM tv_show_genres tsg
+INNER JOIN tv_genres tg
+ON tsg.genre_id = tg.id
+   INNER JOIN tv_shows ts
+   ON tsg.show_id = ts.id
+WHERE title = 'Dexter'
 ORDER BY name ASC;
