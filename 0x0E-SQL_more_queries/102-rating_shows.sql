@@ -6,8 +6,8 @@
     -- The database name will be passed as an argument of the mysql command
 
 
-SELECT title ,sum(rate) as rating FROM tv_show_ratings
+SELECT title ,SUM(rate) AS 'rating' FROM tv_show_ratings
 INNER JOIN tv_shows
 ON tv_show_ratings.show_id = tv_shows.id
-Group by show_id
+GrOUP BY show_id
 ORDER BY rating DESC;
