@@ -7,4 +7,8 @@ function recursive (n) {
   }
   return n * recursive(n - 1);
 }
-console.log(recursive(Arg));
+if (!Arg) {
+  console.log('NaN');
+} else {
+  console.log(recursive(Arg));
+}
