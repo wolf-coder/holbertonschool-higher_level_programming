@@ -23,6 +23,6 @@ def matrix_divided(matrix, div):
     def TypeError_exec():
         exec(
             'raise(TypeError(\'matrix must be a matrix (list of lists)'
-            'of integers/floats\'))')
+            ' of integers/floats\'))')
     return [[round(x / div, 2) if type(x) in [int, float]
              else TypeError_exec() for x in row] for row in matrix]
