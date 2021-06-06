@@ -10,7 +10,7 @@ def matrix_divided(matrix, div):
     """
 
     if not([len(row) for row in matrix].count(len(matrix[0])) == len(matrix)):
-        raise TypeError('Each row of the matrix must have the same size')
+        raise TypeError('matrix must have each row with the same size')
 
     if type(div) not in [int, float]:
         raise TypeError('div must be a number')
