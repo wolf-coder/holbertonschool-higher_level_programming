@@ -16,7 +16,7 @@ def Selector():
     db = MySQLdb.connect(host="localhost", user=username,
                          passwd=password, db=database)
     cursor = db.cursor()
-    sql = "select * from states WHERE name like \"N%\""
+    sql = "SELECT * FROM states WHERE name LIKE BINARY \"N%\" ORDER BY id ASC"
     cursor.execute(sql)
     query_rows = cursor.fetchall()
 
