@@ -19,5 +19,5 @@ query_rows = cursor.fetchall()
 
 for row in query_rows:
     print(row)
-db.close()
 cursor.close()
+db.close()
