@@ -28,8 +28,11 @@ def Fetching(*kw):
     """
     3)Quering
     """
-    for name in session.query(State.name).filter(State.id == 1):
-        print("1: {}".format(name[0]))
+    row = session.query(State).first()
+    if row:
+        print("{}: {}".format(row.id, row.name))
+    else:
+        print("Nothing")
 
 
 if __name__ == "__main__":
