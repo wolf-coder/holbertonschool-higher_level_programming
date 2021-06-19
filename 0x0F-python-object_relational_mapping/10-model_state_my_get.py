@@ -36,7 +36,7 @@ def Fetching(*kw):
         print("{}".format(Demanded_state.id))
     else:
         print("Not found")
-
+    session.close()
 
 if __name__ == "__main__":
     Fetching(sys.argv[1:])
