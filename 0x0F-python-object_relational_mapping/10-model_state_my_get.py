@@ -31,10 +31,9 @@ def Fetching(*kw):
     """
     3)Quering
     """
-    Demanded_state = session.query(State.id).\
-        filter(State.name == searched).first()
+    Demanded_state = session.query(State).filter_by(name=searched).first()
     if Demanded_state:
-        print("{}".format(Demanded_state[0]))
+        print("{}".format(Demanded_state.id))
     else:
         print("Not found")
 
