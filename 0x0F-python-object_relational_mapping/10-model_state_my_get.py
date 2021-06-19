@@ -25,7 +25,9 @@ def Fetching(*kw):
     """
     2) Create Session
     """
-    Session = sessionmaker(bind=engine)
+    Base.metadata.create_all(engine)
+    Session = sessionmaker()
+    Session.configure(bind=engine)
     session = Session()
 
     """
