@@ -36,6 +36,10 @@ def Fetching(*kw):
     Added_row = State(name='Louisiana')
     session.add(Added_row)
     session.commit()
+    """
+    4)printing Added row's id
+    """
+    print("{}".format(Added_row.id))
     session.close()
 
 
