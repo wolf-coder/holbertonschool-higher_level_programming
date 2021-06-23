@@ -11,7 +11,6 @@ from model_city import city
 
 
 def Display_by_CitiesID(*kw):
-
     """
     Write a script that adds the State object “Louisiana” to
     the database hbtn_0e_6_usa
