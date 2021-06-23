@@ -36,7 +36,7 @@ def Display_by_CitiesID(*kw):
     for c, s in session.query(city, State).filter(city.state_id ==
                                                   State.id).all():
         print("{}: ({}) {}".format(s.name, c.id, c.name))
-
+    session.close()
 
 if __name__ == "__main__":
     Display_by_CitiesID(sys.argv[1:])
