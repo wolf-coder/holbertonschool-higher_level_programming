@@ -39,7 +39,7 @@ def Display_by_CitiesID(*kw):
     session.add(newstate)
     session.add(newcity)
     session.commit()
-
+    session.close()
 
 if __name__ == "__main__":
     Display_by_CitiesID(sys.argv[1:])
