@@ -10,20 +10,20 @@ from sqlalchemy import create_engine
 from relationship_city import City
 
 
-def Display_by_CitiesID(*kw):
+def Display_by_CitiesID():
     """
     Write a script that adds the State object “Louisiana” to
     the database hbtn_0e_6_usa
     """
-    username, password, database = kw[0]
-
-    """
-    1) Connecting to DataBase
-    """
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
-                           format(username, password, database),
-                           pool_pre_ping=True)
-
+    engine = create_engine(
+                            'mysql+mysqldb://{}:{}@localhost/{}'
+                            .format(
+                                        sys.argv[1],
+                                        sys.argv[2],
+                                        sys.argv[3]
+                                            ),
+                            pool_pre_ping=True
+                                )
     """
     2) Create Session
     """
@@ -41,4 +41,4 @@ def Display_by_CitiesID(*kw):
 
 
 if __name__ == "__main__":
-    Display_by_CitiesID(sys.argv[1:])
+    Display_by_CitiesID()
