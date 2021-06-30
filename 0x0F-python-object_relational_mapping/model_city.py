@@ -7,7 +7,7 @@ from model_state import Base
 from sqlalchemy.orm import relationship
 
 
-class city(Base):
+class City(Base):
     """
     Defining mapped classes
     """
