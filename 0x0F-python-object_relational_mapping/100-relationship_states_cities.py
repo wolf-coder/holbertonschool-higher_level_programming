@@ -15,29 +15,23 @@ def Display_by_CitiesID(*kw):
     Write a script that adds the State object “Louisiana” to
     the database hbtn_0e_6_usa
     """
-    username, password, database = kw[0]
-
-    """
-    1) Connecting to DataBase
-    """
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
-                           format(username, password, database),
-                           pool_pre_ping=True)
-    """
-
-    2) Create Session
-    """
+    engine = create_engine(
+                            'mysql+mysqldb://{}:{}@localhost/{}'
+                            .format(
+                                        sys.argv[1],
+                                        sys.argv[2],
+                                        sys.argv[3]
+                                            ),
+                            pool_pre_ping=True
+                                )
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-
-    """
-    3)Display by Cities Ids
-    """
     new_State = State(name="California")
     new_State.cities = [City(name="San Francisco")]
     re = session.add(new_State)
     session.commit()
+    session.close()
 
 
 if __name__ == "__main__":
