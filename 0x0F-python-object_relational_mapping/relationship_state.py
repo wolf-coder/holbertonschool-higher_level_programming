@@ -10,7 +10,7 @@ Base = declarative_base()
 
 class State(Base):
     """
-    Defining mapped classes
+    Defining mapped Classes
     """
 
     __tablename__ = 'states'
