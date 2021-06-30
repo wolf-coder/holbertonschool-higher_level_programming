@@ -23,8 +23,8 @@ def Display_by_CitiesID(*kw):
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
                            format(username, password, database),
                            pool_pre_ping=True)
-    """
 
+    """
     2) Create Session
     """
     Base.metadata.create_all(engine)
@@ -39,6 +39,6 @@ def Display_by_CitiesID(*kw):
     session.commit()
     session.close()
 
-
+    
 if __name__ == "__main__":
     Display_by_CitiesID(sys.argv[1:])
