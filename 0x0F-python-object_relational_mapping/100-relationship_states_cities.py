@@ -33,13 +33,11 @@ def Display_by_CitiesID(*kw):
     """
     3)Display by Cities Ids
     """
-    newstate = State(name='California')
-    newcity = City(name='San Francisco')
-    newstate.cities.append(newcity)
-    session.add(newstate)
-    session.add(newcity)
+    new_State = State(name="California")
+    new_State.cities = [City(name="San Francisco")]
+    re = session.add(new_State)
     session.commit()
-    session.close()
+
 
 if __name__ == "__main__":
     Display_by_CitiesID(sys.argv[1:])
