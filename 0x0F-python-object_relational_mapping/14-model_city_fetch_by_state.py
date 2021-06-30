@@ -7,7 +7,7 @@ import sys
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
-from model_city import city
+from model_city import City
 
 
 def Display_by_CitiesID(*kw):
