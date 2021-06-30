@@ -27,8 +27,9 @@ def Display_by_CitiesID(*kw):
 
     2) Create Session
     """
-    Session = sessionmaker()
-    session = Session(bind=engine)
+    Base.metadata.create_all(engine)
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
     """
     3)Display by Cities Ids
