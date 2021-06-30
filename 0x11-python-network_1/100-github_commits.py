@@ -14,8 +14,8 @@ if __name__ == '__main__':
                     owner,
                     "commits"])
     Resp = requests.get(url)
-    Commits_10 = Resp.json()[:10]
-    for i in Commits_10:
+    Commits = Resp.json()[:10]
+    for i in Commits:
         elem = i['sha']
         author = i['commit']['author']['name']
         print('{}: {}'.format(elem, author))
