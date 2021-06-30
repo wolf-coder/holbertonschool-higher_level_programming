@@ -10,7 +10,7 @@ from sqlalchemy.orm import relationship
 
 class City(Base):
     """
-    Defining mapped classes
+    Defining mapped Classes
     """
 
     __tablename__ = 'cities'
