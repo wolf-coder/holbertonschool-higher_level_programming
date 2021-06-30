@@ -33,7 +33,7 @@ def Display_by_CitiesID(*kw):
     """
     3)Display by Cities Ids
     """
-    for c, s in session.query(city, State).filter(city.state_id ==
+    for c, s in session.query(City, State).filter(City.state_id ==
                                                   State.id).all():
         print("{}: ({}) {}".format(s.name, c.id, c.name))
     session.close()
