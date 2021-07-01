@@ -16,7 +16,6 @@ def Display_by_CitiesID(*kw):
     the database hbtn_0e_6_usa
     """
     username, password, database = kw[0]
-    print("{},{},{}".format(username, password, database))
     """
     1) Connecting to DataBase
     """
@@ -30,13 +29,12 @@ def Display_by_CitiesID(*kw):
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-
     """
     3)Display by Cities Ids
     """
     new_State = State(name="California")
     new_State.cities = [City(name="San Francisco")]
-    re = session.add(new_State)
+    session.add(new_State)
     session.commit()
     session.close()
 
