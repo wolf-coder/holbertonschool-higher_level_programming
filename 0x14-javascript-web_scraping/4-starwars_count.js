@@ -4,17 +4,16 @@
 */
 
 const request = require('request');
-
-request.get(process.argv[2], function (Error, response, body) {
-  if (Error) {
-    console.log(Error);
+request.get(process.argv[2], (err, res, body) => {
+  if (err) console.log(err);
+  else {
+    const movies = JSON.parse(body).results;
+    let count = 0;
+    movies.forEach(movie => {
+      movie.characters.forEach(character => {
+        if (character.includes('people/18/')) { count++; }
+      });
+    });
+    console.log(count);
   }
-  let Count = 0;
-  const data = JSON.parse(body);
-  for (let i = 0; data.results[i] !== undefined; i++) {
-    if (data.results[i].characters.includes('https://swapi-api.hbtn.io/api/people/18/')) {
-      Count++;
-    }
-  }
-  console.log(Count);
 });
